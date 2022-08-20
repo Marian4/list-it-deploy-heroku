@@ -1,0 +1,1 @@
+Aplicação onde o usuário pode criar suas próprias listas pessoais do que quiser. A funcionalidade principal é criar uma nova lista, em cada lista o usuário pode cadastrar um novo item, com nome, status, observação (opcional), pode também marcar como feito, editar o item ou excluí-lo. O acesso a aplicação necessita de login, caso não possua ainda, poderá se registrar.
