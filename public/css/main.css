@@ -1,6 +1,11 @@
 *{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+@media screen and (min-width: 800px) {
+    .container {
+      margin: 1em 2em;
+    }
+  } 
 body{
     background-image: url('https://i.dlpng.com/static/png/5481600-kanna-transparent-tumblr-kanna-transparent-500_539_preview.png');
     background-size: 50px;
