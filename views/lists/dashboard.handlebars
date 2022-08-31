@@ -1,0 +1,10 @@
+<div class="page">
+    <form action="/list/create" method="GET">
+        <button type="submit" class="dashboardOption">Criar Lista +</button>
+    </form>
+    <div class="listsArea">
+        {{#each lists}}
+            {{>list}}
+        {{/each}}
+    </div>
+</div>

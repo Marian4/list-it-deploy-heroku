@@ -6,18 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="/">
     <link rel="stylesheet" href="./css/main.css" type="text/css">
-    <title>My Lists</title>
+    <title>List.it</title>
 </head>
 <body>
     <nav class="navbar">
         <div id="logoTitle">list.it</div>
         <div>
-        <a href="/">Home</a>
-        <a href="/user/register">Cadastrar</a>
-        <a href="/list/mylists">Minhas Listas</a>
+            {{#if session.userid}}
+                <a href="/list/dashboard">Dashboard</a>
+                <a href="/user/profile">Perfil</a>
+                <form action="/user/logout" method="POST">
+                <Button type="submit">Logout</Button>
+                </form>
+            {{else}}
+                <a href="/">Home</a>
+                <a href="/user/register">Cadastrar</a>
+                <a href="/user/login">Login</a>
+            {{/if}}
         </div>
     </nav>
     <div class="container">
+        {{#if messages.message}}
+        <p>{{messages.message}}</p>
+        {{/if}}
         {{{body}}}
     </div>
 </body>

@@ -1,13 +1,12 @@
 const express = require('express')
 const router = express.Router() 
-const UserController = require('../controllers/UserController')
-router.use(express.urlencoded({
-	extended: true,
-}))
-router.use(express.json())
+const AuthController = require('../controllers/AuthController')
+const authMiddleware = require('../helpers/authMiddleware')
 
-router.get('/dashboard', UserController.showDashboard)
-router.get('/register', UserController.createNewUserPage)
-router.post('/register', UserController.createNewUser)
+router.get('/register', AuthController.createNewUserPage)
+router.post('/register', AuthController.createNewUser)
+router.get('/login', AuthController.login)
+router.post('/login', AuthController.loginPost)
+router.post('/logout', AuthController.logout)
 
 module.exports = router

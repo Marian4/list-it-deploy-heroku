@@ -1,43 +1,57 @@
 *{
-    background-color: #fff;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 body{
-    width: 100vw;
-    max-width: 100vw;
+    background-image: url('https://i.dlpng.com/static/png/5481600-kanna-transparent-tumblr-kanna-transparent-500_539_preview.png');
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    max-width: 100%;
+    min-height: 100vh;
     margin: 0;
-    position:fixed;
+    overflow-x: hidden;
 }
 .navbar{
     background-color: transparent ;
     width: 100%;
     max-width: 100%;
     height: 30px;
-    padding: 10px;
     display: flex;
     align-items: center;
     justify-content:space-between;
     flex-direction: row;
-    border-bottom: 5px solid #BC8F8F;
+    border-bottom: 5px solid #DC143C;
+    padding: 10px;
 }
 
 #logoTitle {
     text-decoration: none;
-    color: #BC8F8F;
+    color: #DC143C;
     font-size: 2em;
     margin-left: 30px;
 }
-.navbar div a{
+.navbar div{
+    height: 100%; 
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.navbar div a, .navbar div form button{
     text-decoration: none;
-    color: #BC8F8F;
+    color: #DC143C;
+    background-color: transparent;
     font-size: 1em;
     padding-right: 30px;
-    right:-3;
+    margin: 0;
+    border: none;
+    cursor: pointer;
 }
-.navbar div a:hover{
+.navbar div a:hover, .navbar div form button:hover{
     font-size: 1.1em;
     padding-left: 5px;
-    border-left: 3px solid #BC8F8F;
+    border-left: 3px solid #DC143C;
     transition: 0.1s;
 }
 .container{
@@ -49,11 +63,17 @@ body{
     align-items:center;
     padding: 3em 0 3em 0;
 }
+.container .page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .container .pageTitle{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    color: #BC8F8F;
+    color: #DC143C;
     font-size: 1em;
     font-weight: 100;
 }
@@ -68,10 +88,17 @@ body{
     height: 45px;
     border-radius: 0.5em;
     padding: 0 10px 0 10px;
-    border: 2px solid #BC8F8F;
+    border: 2px solid #DC143C;
+}
+.formControl textarea{
+    resize: none;
+    height: 70px;
+    border-radius: 0.5em;
+    padding: 10px 10px 10px 10px;
+    border: 2px solid #DC143C;
 }
 .formControl label{
-    border-left: 5px solid #BC8F8F;
+    border-left: 5px solid #DC143C;
     padding-left: 7px;
     margin: 10px 0 10px 0;
 }
@@ -80,15 +107,61 @@ body{
     margin: 20px 0 20px 0;
     height: 45px;
     background-color: transparent;
-    color: #BC8F8F;
+    color: #DC143C;
     border-radius: 0.5em;
-    border: 2px solid #BC8F8F;
+    border: 2px solid #DC143C;
     cursor: pointer;
 }
 .formControl .formButton:hover{
-    background-color: #BC8F8F;
+    background-color: #DC143C;
     color: #fff;
     border: none;
     transition: 0.5ms;
 }
-
+.dashboardOption{
+    width: 400px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid #DC143C;
+    color: #DC143C;
+    cursor: pointer;
+    border-radius: 0.5em;
+    font-size: 1.2em;
+}
+.dashboardOption:hover{
+    background-color: #DC143C;
+    color: #fff;
+    transition: 0.5ms;
+}
+.listsArea{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 3em 0 3em 0;
+}
+.listBox{
+    margin: 0.5em 0 0.5em 0;
+    width: 250px;
+    height: 150px;
+    background-color: transparent;
+    border: 1px solid #DC143C;
+    font-size: 1.5em;
+    border-radius: 0.5em;
+    display: flex;
+    color: #DC143C;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.listBox:hover{
+    background-color: #DC143C;
+    color: #fff;
+    transition: 1ms;
+}
+.listBox p{
+    background-color: transparent;
+    text-align: center;
+}

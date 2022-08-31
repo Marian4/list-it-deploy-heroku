@@ -1,11 +1,20 @@
 const {DataTypes} = require('sequelize')
 const db = require('../db/db')
 const User = require('./User')
+const queryInterface = db.getQueryInterface();
 
 const List = db.define('List', {
-    Name: {
+    name: {
         type: DataTypes.STRING,
         required: true,
+    },
+    status: {
+        type: DataTypes.STRING,
+        required: false,
+    },
+    description: {
+        type: DataTypes.STRING,
+        required: false,
     }
 })
 
