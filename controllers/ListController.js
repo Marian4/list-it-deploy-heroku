@@ -2,7 +2,7 @@ const List = require('../models/List')
 
 module.exports = class ListController {
     static async showDashboard(req, res) {
-        let lists = await List.findAll()
+        let lists = await List.findAll({where: {UserId: req.session.userid}})
         lists = lists.map((list) => {
             list = list.toJSON()
             return list
@@ -15,7 +15,6 @@ module.exports = class ListController {
     static async createPost (req, res){
         const {name, status, description} = req.body
         const list = {name, status, description, UserId: req.session.userid}
-        console.log("list", list)
         await List.create(list)
         req.flash('message', 'Lista criada com sucesso!')
         req.session.save(() => {
