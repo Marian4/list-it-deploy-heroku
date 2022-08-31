@@ -1,66 +1,68 @@
 *{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+/* ----------- Nexus 4 ----------- */
+
 /* Portrait and Landscape */
 @media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
+  and (device-width: 384px) 
+  and (device-height: 592px) 
   and (-webkit-device-pixel-ratio: 2) {
 
 }
 
 /* Portrait */
 @media screen 
-  and (device-width: 320px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 2) 
+  and (device-width: 384px) 
+  and (device-height: 592px) 
+  and (-webkit-device-pixel-ratio: 2)
   and (orientation: portrait) {
 
 }
 
 /* Landscape */
 @media screen 
-  and (device-width: 320px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 2) 
+  and (device-width: 384px) 
+  and (device-height: 592px) 
+  and (-webkit-device-pixel-ratio: 2)
   and (orientation: landscape) {
 
 }
 
-/* ----------- Galaxy S4, S5 and Note 3 ----------- */
+/* ----------- Nexus 5 ----------- */
 
 /* Portrait and Landscape */
 @media screen 
-  and (device-width: 320px) 
-  and (device-height: 640px) 
+  and (device-width: 360px) 
+  and (device-height: 592px) 
   and (-webkit-device-pixel-ratio: 3) {
 
 }
 
 /* Portrait */
 @media screen 
-  and (device-width: 320px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 3) 
+  and (device-width: 360px) 
+  and (device-height: 592px) 
+  and (-webkit-device-pixel-ratio: 3)
   and (orientation: portrait) {
 
 }
 
 /* Landscape */
 @media screen 
-  and (device-width: 320px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 3) 
+  and (device-width: 360px) 
+  and (device-height: 592px) 
+  and (-webkit-device-pixel-ratio: 3)
   and (orientation: landscape) {
 
 }
 
-/* ----------- Galaxy S6 ----------- */
+/* ----------- Nexus 6 and 6P ----------- */
 
 /* Portrait and Landscape */
 @media screen 
   and (device-width: 360px) 
-  and (device-height: 640px) 
+  and (device-height: 592px) 
   and (-webkit-device-pixel-ratio: 4) {
 
 }
@@ -68,8 +70,8 @@
 /* Portrait */
 @media screen 
   and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 4) 
+  and (device-height: 592px) 
+  and (-webkit-device-pixel-ratio: 4)
   and (orientation: portrait) {
 
 }
@@ -77,8 +79,8 @@
 /* Landscape */
 @media screen 
   and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 4) 
+  and (device-height: 592px) 
+  and (-webkit-device-pixel-ratio: 4)
   and (orientation: landscape) {
 
 }
