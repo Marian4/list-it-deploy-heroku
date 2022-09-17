@@ -5,5 +5,6 @@ const ListController = require('../controllers/ListController')
 router.get('/dashboard', ListController.showDashboard)
 router.get('/create', ListController.create)
 router.post('/create', ListController.createPost)
+router.post('/delete/:id', ListController.delete)
 
 module.exports = router
