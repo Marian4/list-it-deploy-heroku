@@ -63,6 +63,13 @@ footer{
     bottom: 0;
     border-top: 2px solid #DC143C;
     margin-top: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p span{
+    color: #DC143C;
+    font-weight: bold;
 }
 .container{
     width: 100%;
@@ -78,6 +85,8 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 .container .pageTitle{
     display: flex;
@@ -89,7 +98,7 @@ footer{
 }
 
 .formControl{
-    width: 400px;
+    width: 33%;
     display: flex;
     flex-direction: column;
     justify-content: center;
