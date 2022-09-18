@@ -104,6 +104,12 @@ footer p span{
     flex-direction: column;
     justify-content: center;
 }
+.formControl select{
+    height: 45px;
+    border-radius: 0.5em;
+    padding: 0 10px 0 10px;
+    border: 2px solid #DC143C;
+}
 .formControl input{
     height: 45px;
     border-radius: 0.5em;
@@ -138,8 +144,16 @@ footer p span{
     border: none;
     transition: 0.5ms;
 }
-.dashboardOption{
+.dashboardOptionsArea, .listMenuArea{
     width: 400px;
+    max-width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.dashboardOption, .listMenuOption{
+    width: 100%;
     height: 50px;
     background-color: transparent;
     border: 1px solid #DC143C;
@@ -148,7 +162,7 @@ footer p span{
     border-radius: 0.5em;
     font-size: 1.2em;
 }
-.dashboardOption:hover{
+.dashboardOption:hover, .listMenuOption:hover{
     background-color: #DC143C;
     color: #fff;
     transition: 0.5ms;
@@ -172,7 +186,7 @@ footer p span{
     display: flex;
     color: #DC143C;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     cursor: pointer;
 }
@@ -185,22 +199,23 @@ footer p span{
     background-color: transparent;
     text-align: center;
 }
-.listBox .listOptions{
+.listBox .listBoxOptions{
     display: flex;
     flex-direction: row;
     justify-content: end;
     align-items: center;
     width: 100%;
 }
-.listBox .listOptions form{
-    height: 0px;
+.listBox .listBoxOptions form{
+    height: 25px;
     margin-bottom: 10px;
 }
-.listBox .listOptions form .optionButton:hover{
-    height: 32px;
-    width: 32px;
+.listBox .listBoxOptions form .listBoxOptionButton:hover{
+    /*height: 32px;
+    width: 32px;*/
+    border: 2px solid #fff;
 }
-.optionButton{
+.listBoxOptionButton{
     height: 25px;
     width: 25px;
     margin-right: 10px;
@@ -213,6 +228,6 @@ footer p span{
     flex-direction: row;
     justify-content: center;
 }
-.optionButton img{
+.listBoxOptionButton img{
     max-height: 100%;
 }

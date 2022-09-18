@@ -1,4 +1,5 @@
 const List = require('../models/List')
+const Item = require('../models/Item')
 const { validateList } = require('../helpers/validations')
 
 module.exports = class ListController {
@@ -17,7 +18,6 @@ module.exports = class ListController {
         const {name, status, description} = req.body
         const list = {name, status, description, UserId: req.session.userid}
         const err = validateList(list)
-        console.log(err)
         if (err){
             req.flash('message', err)
             req.session.save(() => {
@@ -31,12 +31,22 @@ module.exports = class ListController {
             res.redirect('/list/dashboard')
         })
     }
-    static async delete(req, res){
+    static async delete (req, res){
         const id = req.params.id
         await List.destroy({where: {id}})
         req.flash('message', 'Lista deletada com sucesso')
         req.session.save(() => {
             res.redirect('/list/dashboard')
         })
+    }
+    static async showList (req, res){
+        const id = req.params.id
+        let list = await List.findOne({where: {id}})
+        let items = await Item.findAll({where: {ListId: list.id}})
+        list = list.toJSON()
+        list.items = items.map((item) => {
+            return item.toJSON()
+        })
+        res.render('lists/show', {layout: 'main', list})
     }
 }

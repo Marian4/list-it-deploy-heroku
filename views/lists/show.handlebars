@@ -1,0 +1,17 @@
+<div class="page">
+    <h1>{{list.name}}</h1>
+    <form action="/item/create/{{list.id}}" method="GET" class="listMenuArea">
+        <button type="submit" class="listMenuOption">Criar Item +</button>
+    </form>
+    <form action="/list/edit/{{list.id}}" method="GET" class="listMenuArea">
+        <button type="submit" class="listMenuOption">Editar lista</button>
+    </form>
+    <form action="/list/delete/{{list.id}}" method="POST" class="listMenuArea">
+        <button type="submit" class="listMenuOption">Excluir lista</button>
+    </form>
+    <div class="itemsArea">
+        {{#each list.items}}
+            {{>item}}
+        {{/each}}
+    </div>
+</div>

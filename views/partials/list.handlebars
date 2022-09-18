@@ -1,6 +1,11 @@
-<div class="listBox">
+<div class="listBox" onclick="getListPage({{this.id}})">
     <p>{{this.name}}</p>
-    <div class="listOptions">
-        <form action="list/delete/{{this.id}}" method="POST"><button type="submit" class="optionButton"><img src="img/delete.png"></button></form>
+    <div class="listBoxOptions">
+        <form action="list/delete/{{this.id}}" method="POST"><button type="submit" class="listBoxOptionButton"><img src="img/delete.png"></button></form>
     </div>
 </div>
+<script>
+    function getListPage(id){
+        window.location.href = `/list/${id}`
+    }    
+</script>

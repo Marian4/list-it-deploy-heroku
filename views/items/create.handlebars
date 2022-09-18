@@ -1,1 +1,15 @@
-<h1>Create new Item Page</h1>
+<div class="page">
+    <form class="formControl" action="/item/create/{{list.id}}" method="POST">
+        <label>Nome</label>
+        <input name="name" type="text" placeholder="Dê um nome a sua lista.">
+        <label>Status</label>
+        <select name="status">
+            {{#each status}}
+                <option value="{{this.name}}">{{this.name}}</option>
+            {{/each}}
+        </select>
+        <label>Descrição</label>
+        <textarea name="description" placeholder="Descreva o objetivo do seu item ou faça uma observação"></textarea>
+        <button class="formButton" type="submit">Criar</button>
+    </form>
+</div>
