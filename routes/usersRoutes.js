@@ -7,6 +7,6 @@ router.get('/register', AuthController.createNewUserPage)
 router.post('/register', AuthController.createNewUser)
 router.get('/login', AuthController.login)
 router.post('/login', AuthController.loginPost)
-router.post('/logout', AuthController.logout)
+router.post('/logout', authMiddleware, AuthController.logout)
 
 module.exports = router
