@@ -144,7 +144,7 @@ footer p span{
     border: none;
     transition: 0.5ms;
 }
-.dashboardOptionsArea, .listMenuArea{
+.dashboardOptionsArea{
     width: 400px;
     max-width: 80%;
     display: flex;
@@ -152,7 +152,28 @@ footer p span{
     flex-wrap: wrap;
 
 }
-.dashboardOption, .listMenuOption{
+.listMenuArea{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 3em 0 3em 0;
+}
+.listMenuArea form{
+    width: 30%;
+}
+.dashboardOption{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid #DC143C;
+    color: #DC143C;
+    cursor: pointer;
+    border-radius: 0.5em;
+    font-size: 1.2em;
+}
+.listMenuOption{
     width: 100%;
     height: 50px;
     background-color: transparent;
@@ -232,8 +253,8 @@ footer p span{
     max-height: 100%;
 }
 .itemsArea{
-    width: 800px;
-    max-width: 80%;
+    width: 70%;
+    max-width: 70%;
 }
 .itemArea{
     width: 100%;
