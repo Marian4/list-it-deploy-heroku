@@ -231,3 +231,24 @@ footer p span{
 .listBoxOptionButton img{
     max-height: 100%;
 }
+.itemsArea{
+    width: 800px;
+    max-width: 80%;
+}
+.itemArea{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #DC143C;
+    border-left: 2px solid #DC143C;
+    border-radius: 0.5em;
+    margin-top: 2em;
+}
+.itemArea .itemTitle{
+    margin-left: 20px;
+    font-size: 20px;
+}
+.itemArea p{
+    margin-right: 20px;
+}
