@@ -258,6 +258,7 @@ footer p span{
     max-width: 80%;
 }
 .itemArea{
+    background-color: bisque;
     width: 100%;
     display: flex;
     flex-direction: row;
